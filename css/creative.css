@@ -17,7 +17,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #BE89FF;
+    border-color: #5C78C8;
     border-width: 3px;
 }
 
@@ -26,7 +26,7 @@ hr.light {
 }
 
 a {
-    color: #BE89FF;
+    color: #5C78C8;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -53,7 +53,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #BE89FF;
+    background-color: #5C78C8;
 }
 
 .bg-dark {
@@ -90,7 +90,7 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #BE89FF;
+    color: #5C78C8;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -113,7 +113,7 @@ aside {
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #BE89FF!important;
+    color: #5C78C8!important;
     background-color: transparent;
 }
 
@@ -154,7 +154,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #BE89FF;
+        color: #5C78C8;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -169,7 +169,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #BE89FF;
+        color: #5C78C8;
     }
 }
 
@@ -341,7 +341,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #BE89FF;
+    color: #5C78C8;
 }
 
 .no-gutter > [class*=col-] {
@@ -403,9 +403,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #BE89FF;
+    border-color: #5C78C8;
     color: #fff;
-    background-color: #BE89FF;
+    background-color: #5C78C8;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -446,12 +446,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #BE89FF;
-    background-color: #BE89FF;
+    border-color: #5C78C8;
+    background-color: #5C78C8;
 }
 
 .btn-primary .badge {
-    color: #BE89FF;
+    color: #5C78C8;
     background-color: #fff;
 }
 
