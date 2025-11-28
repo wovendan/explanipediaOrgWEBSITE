@@ -9,7 +9,7 @@
     <meta name="description" content="The Explanipedia Foundation is a global public-interest initiative dedicated to strengthening critical thinking, media literacy, and public scholarship through open knowledge platforms, ethical AI systems, virtual learning environments, and academic collaborations.">
     <meta name="author" content="Dr. Dan Weaver">
 
-    <title>Explanipedia Foundation — Building Public Understanding Through Critical Knowledge</title>
+    <title>Explanipedia Foundation - Building Public Understanding Through Critical Knowledge</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -17,7 +17,7 @@
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" type="text/css">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
@@ -45,6 +45,19 @@
 			.typistPause(1000) // 2 sec
 			.typistAdd('Public Scholarship for Everyone, Everywhere');
                         
+        // Ensure background video starts playing
+        var v = document.getElementById('hero-video');
+        if (v) {
+            v.muted = true;
+            var tryPlay = function() {
+                var p = v.play();
+                if (p && typeof p.catch === 'function') {
+                    p.catch(function(){ setTimeout(tryPlay, 500); });
+                }
+            };
+            v.addEventListener('canplay', tryPlay);
+            tryPlay();
+        }
 	});
 	
 	</script>
@@ -78,6 +91,9 @@
                         <a class="page-scroll" href="#portfolio">Research</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#foundation">Framework</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -88,14 +104,16 @@
     </nav>
 
     <header style="position: relative; overflow: hidden; min-height: 100vh;">
-        <video id="hero-video" autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+        <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="img/header.jpg" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; display:block;">
             <source src="https://s3.wasabisys.com/cdn.explanipedia.com/org/ExplanipediaFoundationHero.mp4" type="video/mp4">
         </video>
-        <div class="header-content" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: none; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <div class="header-content-inner">
-                <h2 style="margin: 12vh 0 20px 0;">Advancing Public Understanding, Critical Thinking & Open Knowledge Infrastructure</h2>
-                <p class="typist" style="margin: 8px 0 0 0; text-align: center; display: inline-block;"></p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">Explore Our Mission</a>
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.35); z-index:1;"></div>
+        <div class="header-content" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; text-align: center; transform: none;">
+            <div class="header-content-inner" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100%; padding-top: 18vh;">
+                <h2 style="color:#fff;">Advancing Public Understanding, Critical Thinking & Open Knowledge Infrastructure</h2>
+                <hr>
+                <p class="typist" style="color:#fff;"></p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll" style="position:absolute; bottom: 40px; left:50%; transform: translateX(-50%);">Explore Our Mission</a>
             </div>
         </div>
     </header>
@@ -107,7 +125,7 @@
                     <h2 class="section-heading">A Global Public-Service Knowledge Initiative</h2>
                     <hr class="light">
                     
-                    <p class="text-faded">“Knowledge becomes power only when it is shared with everyone.”</p>
+                    <p class="text-faded">“The best teachers show you where to look but not what to see.” - Alexandra K. Trenfor</p>
                     <a href="#services" class="btn btn-default btn-xl page-scroll">Learn More About the Foundation</a>
                 </div>
             </div>
@@ -124,31 +142,31 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row services-eq">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-book wow bounceIn text-primary"></i>
+                        <i class="fas fa-4x fa-book wow bounceIn text-primary"></i>
                         <h3>Public Knowledge Platforms</h3>
-                        <p class="text-muted">We design and maintain large-scale, open public-education systems — including Explanipedia, SymbolSpin, Virtually Understood, and Artificially Understood — built to elevate critical reasoning and media literacy.</p>
+                        <p class="text-muted">We design and maintain large-scale, open public-education systems - including Explanipedia, SymbolSpin, Virtually Understood, and Artificially Understood - built to elevate critical reasoning and media literacy.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-graduation-cap wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <i class="fas fa-4x fa-graduation-cap wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Academic Collaboration &amp; Research</h3>
                         <p class="text-muted">We collaborate with universities, researchers, and authors to translate complex academic work into accessible formats, interactive tools, stories, and public-facing learning modules.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-cogs wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fas fa-4x fa-cogs wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>AI-Powered Learning Tools</h3>
                         <p class="text-muted">We develop ethical AI frameworks, dialectic decks, immersive story engines, and research-to-story pipelines that turn scholarly ideas into compelling public content.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-globe wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <i class="fas fa-4x fa-globe wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>Community &amp; Global Outreach</h3>
                         <p class="text-muted">We run multilingual, cross-cultural outreach projects to help communities navigate misinformation, polarization, and cognitive overwhelm through clarity, context, and systems thinking.</p>
                     </div>
@@ -159,97 +177,98 @@
 
 
     <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
+        <div class="container">
+            <div class="row cards-eq">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="http://modulecatalogue.nottingham.ac.uk/malaysia/asp/moduledetails.asp?crs_id=502773&year_id=000111" class="portfolio-box">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Public Platforms
-                                </div>
-                                <div class="project-name">
-                                    Explanipedia — Critical Knowledge for Everyone
-                                </div>
-                            </div>
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-bullseye"></i> Mission &amp; Goals
                         </div>
-                    </a>
+                        <div class="card-body" style="padding:20px;">
+                            <p style="margin-bottom:15px;"><strong><i class="fas fa-bullseye text-primary"></i> Our Mission</strong></p>
+                            <p>To strengthen critical thinking and systems thinking through accessible tools and learning pathways that help people connect ideas, understand the world more deeply, and transform how they learn.</p>
+                            <p style="margin:20px 0 8px 0;"><strong><i class="fas fa-cogs text-primary"></i> What We Do</strong></p>
+                            <p>We curate, connect, and structure ideas to reveal patterns, reduce complexity, and invite deeper exploration.</p>
+                            <p style="margin:20px 0 8px 0;"><strong><i class="fas fa-flag-checkered text-primary"></i> Goals</strong></p>
+                            <ul style="list-style:none; padding-left:0; margin:0;">
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Make learning more stimulating and accessible.</li>
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Improve discoverability and public engagement with peer‑reviewed research.</li>
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Support teaching with critical, symbolic, narrative, and virtual inquiry tools.</li>
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Provide mobile‑friendly, shareable topic stories for broader accessibility.</li>
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Foster cross‑disciplinary exploration via concept‑linked article pathways.</li>
+                                <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Maintain a public‑service, open‑access ethos with transparent processes.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="http://journals.heacademy.ac.uk/doi/pdf/10.11120/ital.2009.08030040" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Semiotics &amp; Media Studies
-                                </div>
-                                <div class="project-name">
-                                    SymbolSpin — Visual Meaning Explained
-                                </div>
-                            </div>
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fa fa-sitemap"></i> Foci
                         </div>
-                    </a>
+                        <div class="card-body" style="padding:20px;">
+                            <p style="margin-bottom:12px;">Explanipedia is a public service initiative against mis/dis/mal‑information combining four domains to help the public make sense of complex ideas:</p>
+                            <ul style="list-style:none; padding-left:0; margin:0 0 14px 0;">
+                                <li style="margin-bottom:8px;">
+                                    <a href="https://explanipedia.com/be/critical/" style="text-decoration:none;">
+                                        <i class="fas fa-scale-balanced text-primary"></i> <strong>Dialectics</strong>
+                                    </a> - critical enquiry for everyone.
+                                </li>
+                                <li style="margin-bottom:8px;">
+                                    <a href="https://explanipedia.com/be/symbolic/" style="text-decoration:none;">
+                                        <i class="fas fa-icons text-primary"></i> <strong>Semiotics</strong>
+                                    </a> - meaning in signs and signals via symbol creation.
+                                </li>
+                                <li style="margin-bottom:8px;">
+                                    <a href="https://explanipedia.com/be/virtual/" style="text-decoration:none;">
+                                        <i class="fas fa-vr-cardboard text-primary"></i> <strong>Simulacrics</strong>
+                                    </a> - embodied learning in virtual worlds.
+                                </li>
+                                <li style="margin-bottom:8px;">
+                                    <a href="https://explanipedia.com/be/narrative/" style="text-decoration:none;">
+                                        <i class="fas fa-compass text-primary"></i> <strong>Narratics</strong>
+                                    </a> - AI‑assisted narratives for public understanding.
+                                </li>
+                            </ul>
+                            <p style="margin:10px 0 6px 0;"><em>Said shorter:</em> Critique, Symbols, VR, AI Stories.</p>
+                            <p style="margin:0;"><em>Said shortest:</em> Spec → Sym → Sim → Sense.</p>
+                            <p style="margin-top:12px;">All welcome. All remixable. In service of public understanding.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="http://www.geos.ed.ac.uk/~gisteac/proceedingsonline/GISRUK2007/PDF/5B7.pdf" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Virtual Learning
-                                </div>
-                                <div class="project-name">
-                                    Virtually Understood — Immersive Knowledge Worlds
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fa fa-university"></i> Higher Education: Key Priorities We Support
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="http://www.eldis.org/vfile/upload/1/document/0901/section2.pdf" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    AI &amp; Narrative Systems
-                                </div>
-                                <div class="project-name">
-                                    Artificially Understood — Stories, Patterns &amp; Logic
-                                </div>
-                            </div>
+                        <div class="card-body" style="padding:20px;">
+                            <ul style="list-style:none; padding-left:0; columns:2; -webkit-columns:2; -moz-columns:2;">
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Transnational Education (TNE)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Open Educational Resources (OER)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Sustainable Development Goals (SDG)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Global Citizenship Education (GCE)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Internationalisation of Curriculum (IoC)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Diversity, Equity &amp; Inclusion (DEI/EDI)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Work Integrated Learning (WIL)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Knowledge Exchange (KE)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Quality Assurance (QA)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Continuing Professional Development (CPD)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Internationalisation of Education (IoE)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Learning &amp; Teaching (L&amp;T)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Massive Open Online Course (MOOC)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Learning Management System (LMS)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Technology Enhanced Learning (TEL)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Universal Design for Learning (UDL)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Open Access (OA)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Research Data Management (RDM)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Digital Literacy (DL)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Microdegree (MC)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Reusable Learning Objects (RLO)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Extended/Virtual Reality (XR/VR)</li>
+                                <li style="margin:6px 0;"><i class="fa fa-check text-primary"></i> Artificial Intelligence in Education (AI/GenAI)</li>
+                            </ul>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="https://www.focusframer.com" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Academic Partnerships
-                                </div>
-                                <div class="project-name">
-                                    Research-to-Public Translation Projects
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="https://www.youtube.com/watch?v=3oluJ4INS-o" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Community Outreach
-                                </div>
-                                <div class="project-name">
-                                    Workshops on Critical Thinking &amp; Misinformation
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -258,27 +277,160 @@
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Learn More About Our Founder</h2>
-                <a href="https://docs.google.com/document/d/1nR2jMQbRsnW14ZWbPZd6vl4ANtE8cA1l/" class="btn btn-default btn-xl wow tada">Read Dr. Dan’s CV / Résumé</a>
+                <h2>Explore Explanipedia</h2>
+                <a href="https://explanipedia.com" class="btn btn-default btn-xl" style="display:inline-block;">Visit Explanipedia.com</a>
             </div>
         </div>
     </aside>
 
+    <section id="foundation" style="padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Foundation Framework</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <div class="row cards-eq">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-landmark"></i> Legal Identity &amp; Purpose
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>A public-benefit educational initiative committed to advancing critical thinking, systems understanding, and open knowledge access across borders. Structured for nonprofit growth and long-term public service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-shield-halved"></i> Governance &amp; Oversight
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Developing a transparent governance model with advisory guidance, ethical oversight, and clear accountability frameworks to support international academic collaboration and institutional trust.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-chart-line"></i> Impact &amp; Activities
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Building platforms, tools, and research-to-public pathways that strengthen informed citizenship, media literacy, and academic engagement. Scaling activities that create measurable public-interest impact.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-diagram-project"></i> Programs &amp; Initiatives
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>A growing suite of public-service programs: open knowledge platforms, AI narrative systems, virtual learning environments, symbolic literacy tools, and multilingual outreach networks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-heart"></i> Values &amp; Commitments
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Guided by openness, inclusivity, academic integrity, and public service. Focused on empowering understanding across cultures and disciplines through ethical, accessible, and transparent knowledge design.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-user-shield"></i> Data Ethics &amp; Responsible AI
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Committed to responsible AI practices, privacy-respecting design, and transparent methodologies that support scholarly trust while expanding public access to complex ideas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-handshake"></i> Partnerships &amp; Support
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Actively cultivating collaborations with universities, researchers, foundations, and community organizations. Designed for scalable partnerships that align with shared educational and societal goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-file-lines"></i> Annual Reporting &amp; Transparency
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Establishing clear processes for documenting activities, outcomes, and progress. Future annual reports will detail initiatives, partnerships, research translation work, and public engagement achievements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-piggy-bank"></i> Funding &amp; Stewardship
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Developing responsible funding pathways that prioritize public benefit, sustainability, and transparent resource use. Stewardship aligned with nonprofit best practices and long-term mission continuity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-people-group"></i> Advisory Network
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Building an international advisory network across disciplines to guide research translation, educational practices, community outreach, and the ethical scaling of public-interest knowledge tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-universal-access"></i> Accessibility &amp; Inclusion
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Committed to accessibility across devices, languages, and learning styles. Designing public-service tools that reduce barriers and expand equitable access to reliable knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:30px;">
+                        <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
+                            <i class="fas fa-file-shield"></i> Policies: Privacy &amp; Terms
+                        </div>
+                        <div class="card-body" style="padding:20px;">
+                            <p>Clear, user-respecting policies for privacy, usage, and open remixing. Built on an open-knowledge ethos that values consent, transparency, and responsible public engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Get in Touch</h2>
                     <hr class="primary">
-                    <p>We welcome collaboration with universities, researchers, students, journalists, foundations, and public-interest organizations. Send a message with your timezone and your ideas — we respond quickly.</p>
+                    <p>We welcome collaboration with universities, researchers, students, journalists, foundations, and public-interest organizations. Send a message with your timezone and your ideas - we respond quickly.</p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <i class="fas fa-phone fa-3x wow bounceIn"></i>
                     <p>WhatsApp: +44 7913 985 890 • +52 55 2724 4750</p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <i class="fas fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:dan@explanipedia.com">dan@explanipedia.com</a></p>
+                    <p><a href="https://docs.google.com/document/d/1nR2jMQbRsnW14ZWbPZd6vl4ANtE8cA1l/" target="_blank" rel="noopener">View CV / Résumé</a></p>
                 </div>
             </div>
         </div>
