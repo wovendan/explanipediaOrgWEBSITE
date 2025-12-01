@@ -431,6 +431,46 @@ header .header-content .header-content-inner p {
     }
 }
 
+/* Equal-height contact info cards */
+@media (min-width: 768px) {
+    #contact .contact-eq {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #contact .contact-eq > [class*="col-"] {
+        display: flex;
+    }
+    #contact .contact-eq .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #contact .contact-eq .card .card-body {
+        flex: 1 1 auto;
+    }
+}
+.panel-group#faq-accordion .panel-heading {
+    padding: 0;
+}
+.panel-group#faq-accordion .panel-heading .panel-title {
+    margin: 0;
+}
+.panel-group#faq-accordion .panel-heading .panel-title a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+.panel-group#faq-accordion .panel-heading .panel-title a:hover {
+    text-decoration: none;
+}
+
+/* FAQ hover should use site blue color */
+.panel-group#faq-accordion .panel-heading .panel-title a:hover,
+.panel-group#faq-accordion .panel-heading .panel-title a:focus,
+.panel-group#faq-accordion .panel-heading .panel-title a:hover .fa,
+.panel-group#faq-accordion .panel-heading .panel-title a:focus .fa {
+    color: #5C78C8;
+}
 .call-to-action h2 {
     margin: 0 auto 20px;
 }
