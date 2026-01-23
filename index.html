@@ -58,6 +58,15 @@
             };
             v.addEventListener('canplay', tryPlay);
             tryPlay();
+            
+            // Pause video on click
+            v.addEventListener('click', function() {
+                if (v.paused) {
+                    v.play();
+                } else {
+                    v.pause();
+                }
+            });
         }
 	});
 	
@@ -119,11 +128,118 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-12 text-center">
                     <h2 class="section-heading">A Global Public-Service Knowledge Initiative</h2>
                     <hr class="light">
-                    
-                    <p class="text-faded">“The best teachers show you where to look, not what to see.” - Alexandra K. Trenfor</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education begins in wonder."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Aristotle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The mind is not a vessel to be filled, but a fire to be kindled."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Plutarch</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The function of education is to teach one to think intensively and to think critically."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Martin Luther King Jr.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education is not preparation for life; education is life itself."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- John Dewey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"It's not what you look at that matters, it's what you see."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- H D Thoreau</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Everything is connected to everything else."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Barry Commoner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education must enable people to read the world, not just the word."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Paulo Freire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The art of teaching is the art of assisting discovery."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Mark Van Doren</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Understanding comes from relating ideas, not memorising them."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Jerome Bruner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"An educated citizenry is a vital requisite for our survival as a free people."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Thomas Jefferson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Imagination is more important than knowledge. Knowledge is limited, imagination encircles the world."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Albert Einstein</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
+                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
+                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Three passions, simple but overwhelmingly strong have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind."</p>
+                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Bertrand Russell</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.3); background: rgba(0,0,0,.2);">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" src="https://www.youtube.com/embed/yIhpI4ydVzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-lg-12 text-center">
                     <a href="#services" class="btn btn-default btn-xl page-scroll">Learn More About the Foundation</a>
                 </div>
             </div>
@@ -208,22 +324,22 @@
                             <p style="margin-bottom:12px;">Explanipedia is a public service initiative against mis/dis/mal‑information combining four domains to help the public make sense of complex ideas:</p>
                             <ul style="list-style:none; padding-left:0; margin:0 0 14px 0;">
                                 <li style="margin-bottom:8px;">
-                                    <a href="https://explanipedia.com/be/critical/" style="text-decoration:none;">
+                                    <a href="https://explanipedia.com/be/critical/" target="_blank" rel="noopener" style="text-decoration:none;">
                                         <i class="fas fa-scale-balanced text-primary"></i> <strong>Dialectics</strong>
                                     </a> - critical enquiry for everyone.
                                 </li>
                                 <li style="margin-bottom:8px;">
-                                    <a href="https://explanipedia.com/be/symbolic/" style="text-decoration:none;">
+                                    <a href="https://explanipedia.com/be/symbolic/" target="_blank" rel="noopener" style="text-decoration:none;">
                                         <i class="fas fa-icons text-primary"></i> <strong>Semiotics</strong>
                                     </a> - meaning in signs and signals via symbol creation.
                                 </li>
                                 <li style="margin-bottom:8px;">
-                                    <a href="https://explanipedia.com/be/virtual/" style="text-decoration:none;">
+                                    <a href="https://explanipedia.com/be/virtual/" target="_blank" rel="noopener" style="text-decoration:none;">
                                         <i class="fas fa-vr-cardboard text-primary"></i> <strong>Simulacrics</strong>
                                     </a> - embodied learning in virtual worlds.
                                 </li>
                                 <li style="margin-bottom:8px;">
-                                    <a href="https://explanipedia.com/be/narrative/" style="text-decoration:none;">
+                                    <a href="https://explanipedia.com/be/narrative/" target="_blank" rel="noopener" style="text-decoration:none;">
                                         <i class="fas fa-compass text-primary"></i> <strong>Narratics</strong>
                                     </a> - AI‑assisted narratives for public understanding.
                                 </li>
@@ -278,7 +394,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Explore The Platform</h2>
-                <a href="https://explanipedia.com" class="btn btn-default btn-xl" style="display:inline-block;">Visit Explanipedia.com</a>
+                <a href="https://explanipedia.com" target="_blank" rel="noopener" class="btn btn-default btn-xl" style="display:inline-block;">Visit Explanipedia.com</a>
             </div>
         </div>
     </aside>
@@ -695,14 +811,26 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fas fa-phone fa-3x wow bounceIn"></i>
-                    <p>WhatsApp: +44 7913 985 890 • +52 55 2724 4750</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fas fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:dan@explanipedia.com">dan@explanipedia.com</a></p>
-                    <p><a href="https://docs.google.com/document/d/1nR2jMQbRsnW14ZWbPZd6vl4ANtE8cA1l/" target="_blank" rel="noopener">View CV / Résumé</a></p>
+                <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-top: 40px;">
+                    <h3 style="margin-bottom: 20px;">Dan Weaver BSc, MRes, MSc, PhD</h3>
+                    <p style="margin-bottom: 20px; font-size: 16px;">Education Technology • Spatiotemporal Geomatics • AI • VR</p>
+                    <p style="margin-bottom: 20px;">
+                        <a href="https://explanipedia.org" target="_blank" rel="noopener" style="margin: 0 10px;">Explanipedia.org</a> | 
+                        <a href="https://explanipedia.com" target="_blank" rel="noopener" style="margin: 0 10px;">Explanipedia.com</a> | 
+                        <a href="https://drdanweaver.com" target="_blank" rel="noopener" style="margin: 0 10px;">DrDanWeaver.com</a>
+                    </p>
+                    <p style="margin-bottom: 10px;">
+                        <i class="fas fa-envelope"></i> Email: <a href="mailto:dan@explanipedia.com">dan@explanipedia.com</a>
+                    </p>
+                    <p style="margin-bottom: 10px;">
+                        💬 WhatsApp (preferred): <a href="https://wa.me/525527244750" target="_blank" rel="noopener">+52 55 2724 4750</a>
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        📞 Voice / Voicemail: <a href="tel:+441156547183">+44 115 654 7183</a>
+                    </p>
+                    <p style="margin-top: 30px;">
+                        <a href="https://docs.google.com/document/d/1nR2jMQbRsnW14ZWbPZd6vl4ANtE8cA1l/" target="_blank" rel="noopener">View CV / Résumé</a>
+                    </p>
                 </div>
             </div>
         </div>
