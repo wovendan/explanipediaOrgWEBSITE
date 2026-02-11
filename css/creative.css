@@ -193,7 +193,8 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    /* Fallback image shown while hero video is loading */
+    background-image: url(https://s3.wasabisys.com/cdn.explanipedia.com/site/critical_thinking_clouds.jpg?v=20260211);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -404,6 +405,11 @@ header .header-content .header-content-inner p {
 }
 
 /* Equal-height cards for Foundation / Charity Readiness */
+#foundation {
+    /* Mild blue background to visually differentiate the Framework section */
+    background: #f3f7ff;
+}
+
 @media (min-width: 768px) {
     #foundation .cards-eq {
         display: flex;
@@ -462,6 +468,26 @@ header .header-content .header-content-inner p {
 }
 .panel-group#faq-accordion .panel-heading .panel-title a:hover {
     text-decoration: none;
+}
+
+/* Inline "highlighter pen" emphasis */
+.hl {
+    background: #ffef8a;
+    padding: 0 .18em;
+    border-radius: .14em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* Tighter heading-to-body spacing inside the Commissioned Civic Packages card */
+.civic-packages p.civic-heading {
+    margin: 16px 0 4px;
+}
+.civic-packages p.civic-heading:first-child {
+    margin-top: 0;
+}
+.civic-packages p.civic-heading + p {
+    margin-top: 0;
 }
 
 /* FAQ hover should use site blue color */
