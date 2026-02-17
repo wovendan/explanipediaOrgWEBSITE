@@ -25,6 +25,45 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css?v=20260211" type="text/css">
+    <style>
+        /* Inspiration quote cards */
+        #about .inspiration-card {
+            border: 1px solid rgba(0, 0, 0, .10);
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+            overflow: hidden;
+            height: 200px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #about .inspiration-card .inspiration-quote {
+            padding: 22px 22px 14px 22px;
+            margin: 0;
+            flex: 1;
+            color: #1f2937;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        #about .inspiration-card .inspiration-author {
+            padding: 12px 22px;
+            margin: 0;
+            border-top: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(92, 120, 200, .07);
+            color: #5C78C8;
+            font-weight: 700;
+            font-size: 13px;
+            text-align: right;
+        }
+
+        /* Ensure icon spacing in headers & list bullets */
+        .card-header i { margin-right: 8px; }
+        .card-body ul li i { margin-right: 8px; }
+        .card-body p strong i { margin-right: 8px; }
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -141,99 +180,75 @@
             </div>
             <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education begins in wonder."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Aristotle</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Education begins in wonder.”</p>
+                        <p class="inspiration-author">Aristotle</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The mind is not a vessel to be filled, but a fire to be kindled."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Plutarch</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“The mind is not a vessel to be filled, but a fire to be kindled.”</p>
+                        <p class="inspiration-author">Plutarch</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The function of education is to teach one to think intensively and to think critically."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Martin Luther King Jr.</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“The function of education is to teach one to think intensively and to think critically.”</p>
+                        <p class="inspiration-author">Martin Luther King Jr.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education is not preparation for life; education is life itself."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- John Dewey</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Education is not preparation for life; education is life itself.”</p>
+                        <p class="inspiration-author">John Dewey</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"It's not what you look at that matters, it's what you see."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- H D Thoreau</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“It’s not what you look at that matters, it’s what you see.”</p>
+                        <p class="inspiration-author">H D Thoreau</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Everything is connected to everything else."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Barry Commoner</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Everything is connected to everything else.”</p>
+                        <p class="inspiration-author">Barry Commoner</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Education must enable people to read the world, not just the word."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Paulo Freire</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Education must enable people to read the world, not just the word.”</p>
+                        <p class="inspiration-author">Paulo Freire</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"The art of teaching is the art of assisting discovery."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Mark Van Doren</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“The art of teaching is the art of assisting discovery.”</p>
+                        <p class="inspiration-author">Mark Van Doren</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Understanding comes from relating ideas, not memorising them."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Jerome Bruner</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Understanding comes from relating ideas, not memorising them.”</p>
+                        <p class="inspiration-author">Jerome Bruner</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"An educated citizenry is a vital requisite for our survival as a free people."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Thomas Jefferson</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“An educated citizenry is a vital requisite for our survival as a free people.”</p>
+                        <p class="inspiration-author">Thomas Jefferson</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Imagination is more important than knowledge. Knowledge is limited, imagination encircles the world."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Albert Einstein</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Imagination is more important than knowledge. Knowledge is limited, imagination encircles the world.”</p>
+                        <p class="inspiration-author">Albert Einstein</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" style="margin-bottom: 20px;">
-                    <div class="card" style="border:1px solid rgba(255,255,255,.2); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.2); overflow:hidden; height:200px; background:rgba(255,255,255,.05);">
-                        <div class="card-body" style="padding:25px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                            <p class="text-faded" style="font-style: italic; font-size:16px; line-height:1.6; margin:0; flex-grow:1;">"Three passions, simple but overwhelmingly strong have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind."</p>
-                            <p class="text-faded" style="font-size:14px; margin-top:15px; opacity:0.9;">- Bertrand Russell</p>
-                        </div>
+                    <div class="card inspiration-card">
+                        <p class="inspiration-quote">“Three passions, simple but overwhelmingly strong have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind.”</p>
+                        <p class="inspiration-author">Bertrand Russell</p>
                     </div>
                 </div>
             </div>
@@ -501,7 +516,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px; text-align:left;">
-                        <div class="col-lg-10 col-lg-offset-1">
+                        <div class="col-lg-12">
                             <div class="card" style="border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08); overflow:hidden; margin-bottom:20px;">
                                 <div class="card-header" style="padding:18px 20px; background:#5C78C8; color:#fff; font-weight:700;">
                                     <i class="fa-solid fa-briefcase"></i> Commissioned Civic Impact Packages (CIPs)
@@ -561,7 +576,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
-                        <div class="col-lg-10 col-lg-offset-1">
+                        <div class="col-lg-12">
                     <div class="panel-group" id="faq-accordion" role="tablist" aria-multiselectable="true" style="margin-top: 0; text-align:left;">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="faq-h1">
@@ -737,7 +752,7 @@
                     </div>
                     <div class="text-center" style="margin-top: 30px; padding: 10px 0 60px 0;">
                         <a href="https://drive.google.com/drive/u/2/folders/1NHNF7imx9GnYbXMCE8Tgsik06ge2CGlk" target="_blank" rel="noopener" class="btn btn-primary btn-xl wow pulse" style="padding: 18px 44px; font-size: 18px; border-width: 2px; box-shadow: 0 12px 28px rgba(0,0,0,.25);">
-                            <i class="fas fa-folder-open" style="margin-right:8px;"></i>Academic Collaboration Docs
+                            <i class="fas fa-folder-open" style="margin-right:8px;"></i> Academic Collaboration Docs
                         </a>
                     </div>
                 </div>
