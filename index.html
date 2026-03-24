@@ -63,6 +63,41 @@
         .card-header i { margin-right: 8px; }
         .card-body ul li i { margin-right: 8px; }
         .card-body p strong i { margin-right: 8px; }
+
+        /* Hero: constrain width + scale type so long headline + typist lines fit without breaking layout */
+        header .header-content .header-content-inner .hero-text-stack {
+            width: 100%;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        header .header-content .header-content-inner .hero-text-stack h2 {
+            font-size: 26px;
+            line-height: 1.35;
+            margin: 0;
+        }
+        header .header-content .header-content-inner .hero-text-stack p.typist {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            font-size: 18px;
+            line-height: 1.55;
+            min-height: 5em;
+            margin: 0;
+            white-space: pre-wrap;
+            text-align: center;
+        }
+        @media (max-width: 767px) {
+            header .header-content .header-content-inner .hero-text-stack h2 {
+                font-size: 17px;
+            }
+            header .header-content .header-content-inner .hero-text-stack p.typist {
+                font-size: 15px;
+                min-height: 6.5em;
+            }
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -74,18 +109,18 @@
     
     	
 	<script src="js/jquery.js"></script>
-	
     <script src="src/jquery.typist.js"></script>
 <script>
 	jQuery(function($) {
 		$('.typist')
 			.typist({ speed: 15, cursor: false })
-			.typistPause(2000) // 2 sec
-			.typistAdd('Critical Thinking for a Fragmented World\n')
-			.typistPause(1000) // 2 sec
-			.typistAdd('Public Scholarship for Everyone, Everywhere');
-                        
-        // Ensure background video starts playing
+			.typistPause(1800)
+			.typistAdd('Critical thinking for a complex world.\n')
+			.typistPause(700)
+			.typistAdd('Connecting scholarship, ideas and people.\n')
+			.typistPause(700)
+			.typistAdd('Understanding that drives real-world impact.');
+
         var v = document.getElementById('hero-video');
         if (v) {
             v.muted = true;
@@ -97,8 +132,6 @@
             };
             v.addEventListener('canplay', tryPlay);
             tryPlay();
-            
-            // Pause video on click
             v.addEventListener('click', function() {
                 if (v.paused) {
                     v.play();
@@ -108,7 +141,6 @@
             });
         }
 	});
-	
 	</script>
 </head>
 
@@ -161,10 +193,12 @@
         </video>
         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.35); z-index:1;"></div>
         <div class="header-content" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; text-align: center; transform: none;">
-            <div class="header-content-inner" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100%; padding-top: 18vh;">
-                <h2 style="color:#fff;">Advancing Public Understanding, Critical Thinking & Open Knowledge Infrastructure</h2>
-                <hr>
-                <p class="typist" style="color:#fff;"></p>
+            <div class="header-content-inner" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100%; padding-top: 16vh;">
+                <div class="hero-text-stack">
+                    <h2 style="color:#fff;">Beyond mis/dis/mal-information: open knowledge infrastructure for public understanding.</h2>
+                    <hr>
+                    <p class="typist" style="color:#fff;"></p>
+                </div>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll" style="position:absolute; bottom: 40px; left:50%; transform: translateX(-50%);">Explore Our Mission</a>
             </div>
         </div>
@@ -268,6 +302,11 @@
                     <hr class="primary">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="text-muted" style="font-size: 17px; line-height: 1.6; margin-bottom: 36px;">We build explanatory learning infrastructure that translates complex knowledge into accessible, structured, and actionable understanding.</p>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="row services-eq">
@@ -275,34 +314,48 @@
                     <div class="service-box">
                         <i class="fas fa-4x fa-book wow bounceIn text-primary"></i>
                         <h3>Public Knowledge Platform</h3>
-                        <p class="text-muted">We build and maintain <a href="https://explanipedia.com" target="_blank" rel="noopener">Explanipedia.com</a> - an open, public-service learning platform designed to strengthen critical reasoning and media literacy.</p>
+                        <p class="text-muted">We build and maintain <a href="https://explanipedia.com" target="_blank" rel="noopener">Explanipedia.com</a>, an open explanatory platform that structures knowledge across books, research, and media into interconnected systems of understanding.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fas fa-4x fa-graduation-cap wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Academic Collaboration</h3>
-                        <p class="text-muted">We work with universities, researchers, and authors to translate scholarly work into accessible explanations, tools, and narrative learning modules.</p>
+                        <p class="text-muted">We collaborate with universities, researchers, and authors to translate scholarly work into durable, public-facing explanation systems.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fas fa-4x fa-cogs wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Learning Tools</h3>
-                        <p class="text-muted">We develop ethical AI, VR & Web frameworks, dialectic decks, and narrative engines that transform research into engaging public content.</p>
+                        <p class="text-muted">We develop AI, VR, and narrative systems that turn complex knowledge into engaging, structured learning experiences.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fas fa-4x fa-globe wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>Community Outreach</h3>
-                        <p class="text-muted">We support cross-cultural learning initiatives that help communities navigate misinformation and complexity with clarity.</p>
+                        <p class="text-muted">We support public understanding through tools and initiatives that help people navigate complexity, misinformation, and uncertainty.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="information-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">From Information to Action</h2>
+                    <hr class="primary">
+                    <div>
+                        <p class="text-muted" style="font-size: 17px; line-height: 1.6;">For much of the public, access to information is no longer the primary challenge. The challenge is transforming information into understanding, and understanding into informed action.</p>
+                        <p class="text-muted" style="font-size: 17px; line-height: 1.6; margin-top: 16px;">Explanipedia focuses on this transition by building systems that connect ideas, reveal structure, and create pathways for understanding and engaging with the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="no-padding" id="portfolio">
         <div class="container">
@@ -314,9 +367,9 @@
                         </div>
                         <div class="card-body" style="padding:20px;">
                             <p style="margin-bottom:15px;"><strong><i class="fas fa-bullseye text-primary"></i> Our Mission</strong></p>
-                            <p>To strengthen critical thinking and systems thinking through accessible tools and learning pathways that help people connect ideas, understand the world more deeply, and transform how they learn.</p>
+                            <p>To build open explanatory learning infrastructure that strengthens critical and systems thinking, connects ideas across domains, and enables informed thought and action through accessible tools and learning pathways.</p>
                             <p style="margin:20px 0 8px 0;"><strong><i class="fas fa-cogs text-primary"></i> What We Do</strong></p>
-                            <p>We curate, connect and structure ideas to reveal patterns, reduce complexity, and invite deeper exploration.</p>
+                            <p>We curate, structure, and connect knowledge to reveal patterns, reduce complexity, deepen understanding, and create pathways from insight to informed action.</p>
                             <p style="margin:20px 0 8px 0;"><strong><i class="fas fa-flag-checkered text-primary"></i> Goals</strong></p>
                             <ul style="list-style:none; padding-left:0; margin:0;">
                                 <li style="margin-bottom:8px;"><i class="fa fa-check text-primary"></i> Make learning more stimulating and accessible.</li>
@@ -335,7 +388,7 @@
                             <i class="fa fa-sitemap"></i> Foci
                         </div>
                         <div class="card-body" style="padding:20px;">
-                            <p style="margin-bottom:12px;">Explanipedia is a public service initiative against mis/dis/mal‑information combining four domains to help the public make sense of complex ideas:</p>
+                            <p style="margin-bottom:12px;">Explanipedia is a public-service initiative responding to mis-, dis-, and malinformation by building systems for understanding. Among a range of impact-focused innovations, we bring together four domains to help the public make sense of complex ideas.</p>
                             <ul style="list-style:none; padding-left:0; margin:0 0 14px 0;">
                                 <li style="margin-bottom:8px;">
                                     <a href="https://explanipedia.com/be/critical/" target="_blank" rel="noopener" style="text-decoration:none;">
@@ -418,7 +471,10 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Collaboration</h2>
                     <hr class="primary">
-                    <p>We work with universities, labs, departments, foundations, and civic institutions to deliver durable, open-access public scholarship through structured collaborations.</p>
+                    <div>
+                        <p>Collaborations focus on long-term public understanding and impact, rather than short-cycle promotion.</p>
+                        <p>We work with universities, labs, departments, foundations, and civic institutions to deliver durable, open-access public scholarship through structured collaborations.</p>
+                    </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="row contact-eq" style="margin-top: 20px; text-align: left;">
@@ -862,7 +918,7 @@
                             <i class="fas fa-piggy-bank"></i> Funding &amp; Stewardship
                         </div>
                         <div class="card-body" style="padding:20px;">
-                            <p>Developing responsible funding pathways that prioritize public benefit, sustainability, and transparent resource use. Stewardship aligned with nonprofit best practices and long-term mission continuity.</p>
+                            <p>Funding draws on public support, institutional collaboration, and international public-interest sources to keep work independent and sustainable. Resources are stewarded transparently for long-term public benefit, in line with nonprofit best practice.</p>
                         </div>
                     </div>
                 </div>
@@ -907,6 +963,7 @@
                     <h2 class="section-heading">Get in Touch</h2>
                     <hr class="primary">
                     <p>We welcome collaboration with universities, researchers, educators, students, authors, journalists, YouTube creators, foundations, public-interest organisations, and skilled individuals who want to contribute. Share your timezone and your ideas - we respond quickly and thoughtfully.</p>
+                    <p style="margin-top: 16px;">We are particularly interested in collaborations that strengthen public understanding, research impact, and the translation of complex knowledge into usable forms.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-top: 40px;">
                     <h3 style="margin-bottom: 20px;">Dan Weaver BSc, MRes, MSc, PhD</h3>
