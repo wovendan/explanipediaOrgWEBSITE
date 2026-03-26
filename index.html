@@ -98,6 +98,43 @@
                 min-height: 6.5em;
             }
         }
+
+        /* Video Explainer: keep embeds within viewport height */
+        #video-explainer {
+            --video-max-h: 65vh;
+        }
+        #video-explainer .video-explainer-row {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        #video-explainer .video-explainer-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #video-explainer .video-explainer-embed {
+            width: 100%;
+            max-width: min(100%, calc(var(--video-max-h) * 0.5625));
+            aspect-ratio: 9 / 16;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0,0,0,.3);
+            background: rgba(0,0,0,.2);
+            overflow: hidden;
+        }
+        #video-explainer .video-explainer-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+        @media (max-width: 767px) {
+            #video-explainer {
+                --video-max-h: 58vh;
+            }
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -173,6 +210,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Collab</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#video-explainer">Video Explainer</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#foundation">Framework</a>
@@ -816,19 +856,40 @@
         </div>
     </section>
 
+    <section id="video-explainer" style="padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Video Explainer</h2>
+                    <hr class="primary">
+                    <p style="margin: 16px auto 0 auto; max-width: 980px; color: #555;">
+                        Explanipedia 1-minute intro and 1-minute resource explainer template <sup><span class="badge" style="background:#f0ad4e; font-weight:700; letter-spacing:.2px;">beta</span></sup>
+                        demonstrated using example book <a href="https://explanipedia.com/book/chain-of-ideas-the-origins-of-our-authoritarian-age/" target="_blank" rel="noopener">Chain of Ideas by Ibram X. Kendi (Explanipedia Civic Impact Portal)</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="row video-explainer-row">
+                <div class="col-sm-12 col-md-6 video-explainer-col">
+                    <div class="video-explainer-embed">
+                        <iframe src="https://www.youtube.com/embed/yIhpI4ydVzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 video-explainer-col">
+                    <div class="video-explainer-embed">
+                        <iframe src="https://www.youtube.com/embed/m0OpBPIJQNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="foundation" style="padding: 80px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Foundation Framework</h2>
                     <hr class="primary">
-                </div>
-            </div>
-            <div class="row" style="margin-top: 50px; margin-bottom: 40px;">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.3); background: rgba(0,0,0,.2);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" src="https://www.youtube.com/embed/yIhpI4ydVzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
                 </div>
             </div>
             <div class="row cards-eq">
